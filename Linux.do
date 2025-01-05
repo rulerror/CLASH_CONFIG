@@ -9,29 +9,20 @@ ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ba
 ruleset=REJECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
 ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-ruleset=DIRECT,[]GEOIP,CN
+ruleset=DIRECT,[]GEOIP,CN,no-resolve
 ruleset=🎈 其余流量,[]FINAL
 
 custom_proxy_group=☁️ 代理选择`select`[]🔮 负载均衡`[]⚡ 自动选择`[]✏️ 手动选择`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇰🇷 韩国节点`[]🇺🇲 美国节点`
 custom_proxy_group=✏️ 手动选择`select`.*
-custom_proxy_group=🇭🇰 香港节点`url-test`.*(香港)`http://connectivitycheck.gstatic.com/generate_204`300,,50
-custom_proxy_group=🇨🇳 台湾节点`url-test`.*(台湾)`http://connectivitycheck.gstatic.com/generate_204`300,,50
-custom_proxy_group=🇸🇬 狮城节点`url-test`.*(新加坡)`http://connectivitycheck.gstatic.com/generate_204`300,,50
-custom_proxy_group=🇯🇵 日本节点`url-test`.*(日本)`http://connectivitycheck.gstatic.com/generate_204`300,,50
-custom_proxy_group=🇰🇷 韩国节点`url-test`.*(韩国)`http://connectivitycheck.gstatic.com/generate_204`300,,50
-custom_proxy_group=🇺🇲 美国节点`url-test`.*(美国)`http://connectivitycheck.gstatic.com/generate_204`300,,100
-custom_proxy_group=⚡ 自动选择`url-test`.*`http://connectivitycheck.gstatic.com/generate_204`300
-custom_proxy_group=🔮 负载均衡`load-balance`.*(香港)`http://connectivitycheck.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇭🇰 香港节点`url-test`(香港)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇨🇳 台湾节点`url-test`(台湾)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇸🇬 狮城节点`url-test`(新加坡)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇯🇵 日本节点`url-test`(日本)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇰🇷 韩国节点`url-test`(韩国)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=🇺🇲 美国节点`url-test`(美国)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=⚡ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300
+custom_proxy_group=🔮 负载均衡`load-balance`(香港)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🎈 其余流量`select`[]☁️ 代理选择`[]DIRECT
-
-enable_rule_generator=true
-overwrite_original_rules=true
-add_emoji=true
-remove_old_emoji=true
-skip_cert_verify_flag=true
-clash_use_new_field_name=true
-write_managed_config=false
-udp_flag=false
 
 
 enable_rule_generator=true
