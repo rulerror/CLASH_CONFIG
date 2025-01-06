@@ -12,8 +12,9 @@ ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ch
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=🎈 其余流量,[]FINAL
 
-custom_proxy_group=☁️ 代理选择`select`[]🔮 负载均衡`[]⚡ 自动选择`[]✏️ 手动选择`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇰🇷 韩国节点`[]🇺🇲 美国节点`
 custom_proxy_group=⚡ 自动选择`url-test`.*`http://www.gstatic.com/generate_204`300
+custom_proxy_group=🔮 负载均衡`load-balance`(香港)`http://www.gstatic.com/generate_204`300,,50
+custom_proxy_group=☁️ 代理选择`select`[]⚡ 自动选择`[]🔮 负载均衡`[]✏️ 手动选择`[]🇭🇰 香港节点`[]🇨🇳 台湾节点`[]🇸🇬 狮城节点`[]🇯🇵 日本节点`[]🇰🇷 韩国节点`[]🇺🇲 美国节点`
 custom_proxy_group=✏️ 手动选择`select`.*
 custom_proxy_group=🇭🇰 香港节点`url-test`(香港)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇨🇳 台湾节点`url-test`(台湾)`http://www.gstatic.com/generate_204`300,,50
@@ -21,7 +22,6 @@ custom_proxy_group=🇸🇬 狮城节点`url-test`(新加坡)`http://www.gstatic
 custom_proxy_group=🇯🇵 日本节点`url-test`(日本)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇰🇷 韩国节点`url-test`(韩国)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🇺🇲 美国节点`url-test`(美国)`http://www.gstatic.com/generate_204`300,,100
-custom_proxy_group=🔮 负载均衡`load-balance`(香港)`http://www.gstatic.com/generate_204`300,,50
 custom_proxy_group=🎈 其余流量`select`[]☁️ 代理选择`[]DIRECT
 
 enable_rule_generator=true
@@ -30,7 +30,7 @@ add_emoji=true
 remove_old_emoji=true
 skip_cert_verify_flag=true
 clash_use_new_field_name=true
-write_managed_config=flase
+write_managed_config=false
 udp_flag=false
 
 exclude_remarks=(续费|重置|推广|佣金|IPV6接入|TG群|到期|Update|Traffic|更新订阅|更新一次订阅|不一定|勒索|通告|均为二手倒卖|重大漏洞|公告|已恢复|炸了|Expire|时间|Panel|用户群|学术|登录|面板|计划|全局代理|剩余流量|异常|custom)
